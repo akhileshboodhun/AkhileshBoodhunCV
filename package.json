@@ -1,0 +1,19 @@
+{
+    "name": "nodesass-ex",
+    "version": "1.0.0",
+    "main": "index.html",
+    "scripts": {
+        "sass": "node-sass -w scss -o public/css",
+        "server": "live-server --open=public --port=8080",
+        "start": "concurrently \"npm run sass\" \"npm run server\" "
+    },
+    "keywords": [],
+    "author": "Jan Bodnar",
+    "license": "BSD",
+    "dependencies": {
+        "live-server": "*",
+        "concurrently": "^6.2.1",
+        "node-sass": "^6.0.1"
+    },
+    "description": ""
+}
