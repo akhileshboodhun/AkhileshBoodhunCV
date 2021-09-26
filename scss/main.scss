@@ -1,13 +1,245 @@
+:root {
+    --darkergrey: rgb(68, 68, 68);
+    --darkgrey: rgb(126, 126, 126);
+    --lightergrey: rgb(192, 192, 192);
+    --lightgrey: rgb(238, 238, 238);
+    ;
+}
+
+@font-face {
+    font-family: 'Lato-Thin';
+    src: url('../../fonts/Lato/Lato-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    src: url('../../fonts/Lato/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url('../../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../../fonts/Lato/Lato-Bold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
-    background: blue;
-    p {
-        background: green;
-        i {
-            color: yellow;
+    background: darkgray;
+}
+
+.page {
+    background: white;
+    height: 100vh;
+    width: 44vw;
+    display: flex;
+}
+
+.separation {
+    width: 12vw;
+    background: darkgray;
+}
+
+.big-container {
+    margin: 50px;
+    display: flex;
+}
+
+.subpage {
+    width: 22vw;
+    padding: 20px;
+}
+
+.subpage2 {
+    background: var(--lightgrey);
+}
+
+.contact-container {
+    font-family: 'Lato-Light';
+    color: var(--darkgrey);
+    z-index: 1;
+    position: absolute;
+}
+
+.name {
+    color: rgb(47, 47, 47);
+    letter-spacing: 5px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+@keyframes slideanim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.name p {
+    margin: 0;
+}
+
+.name :nth-child(1) {
+    font-family: 'Lato-Thin', sans-serif;
+}
+
+.name :nth-child(2) {
+    font-family: 'Lato-Bold', sans-serif;
+}
+
+.name :nth-child(3) {
+    font-family: 'Lato-Thin', sans-serif;
+    color: white;
+    background: black;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@for $i from 1 through 3 {
+    .name :nth-child(#{$i}) {
+        opacity: 0;
+        animation-delay: #{$i * 0.2}s;
+        animation-name: slideanim;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.container2 .subpage2 {
+    vertical-align: middle;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 .name {
+    margin-top: 10vh;
+}
+
+.section {
+    font-family: 'Lato-Light', sans-serif;
+    font-size: 16px;
+}
+
+.section-title {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.section ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.section ul li {
+    font-family: 'Lato-Regular', sans-serif;
+    font-size: 12px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    color: var(--darkergrey);
+}
+
+.skills {
+    ul {
+        list-style-type: none;
+        li {
+            padding: 0;
+            margin-bottom: 10px;
+            font-family: 'Lato-Bold', sans-serif;
         }
     }
-    nav {
-        color: aliceblue;
-        /*hello*/
+}
+
+.skills-group {
+    display: flex;
+}
+
+.skill-names {
+    width: 50%;
+}
+
+.skill-dots {
+    width: 50%;
+}
+
+.dots {
+    display: block;
+}
+
+.dot {
+    display: inline-block;
+    background: black;
+    border-radius: 200px;
+    width: 8px;
+    height: 8px;
+    margin-left: 4px;
+    margin-bottom: 14px;
+}
+
+.dot-grey {
+    background: var(--lightergrey);
+}
+
+.profile-pic {
+    border-radius: 500px;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    background: url('../res/images/PortraitPhoto.jpg');
+    background-size: 150px 150px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+.profile-group {
+    display: block;
+}
+
+.extra-padding {
+    padding-top: 20px;
+}
+
+.subpage1 {
+    color: var(--darkergrey);
+}
+
+.section-group {
+     :nth-child(1) {
+        font-size: 10px;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        border-top: 3px solid var(--lightgrey);
     }
+     :nth-child(2) {
+        font-family: 'Lato-Regular', sans-serif;
+    }
+     :nth-child(3) {}
+     :nth-child(4) {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+// .section-group :nth-child(1) {
+//     font-size: 8px;
+//     color: blue;
+// }
+.page {
+    animation: slideanim 1.5s;
 }
