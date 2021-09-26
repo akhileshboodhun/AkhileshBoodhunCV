@@ -202,3 +202,50 @@ body {
 
 .page {
   animation: slideanim 1.5s; }
+
+@media screen and (max-width: 1350px) {
+  .container1,
+  .container2 {
+    margin: auto;
+    min-height: 1080px; }
+  .subpage1,
+  .subpage2 {
+    min-width: 300px; }
+  .separation {
+    width: 100vw;
+    height: 10px; }
+  .big-container {
+    display: block;
+    min-width: 600px; } }
+
+@media screen and (max-height: 1350px) {
+  .container1,
+  .container2 {
+    margin: auto;
+    min-height: 1080px; } }
+
+@media only print {
+  @page {
+    margin-top: 25px;
+    margin-bottom: 25px; }
+  .container1,
+  .container2 {
+    margin: auto;
+    max-height: 800px;
+    min-width: 600px;
+    margin-right: 120px; }
+  .subpage1,
+  .subpage2 {
+    min-width: 300px; }
+  .separation {
+    width: 100vw;
+    height: 10px; }
+  .big-container {
+    margin: auto;
+    display: block;
+    min-width: 600px; }
+  * {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact; }
+  .separation {
+    display: none; } }
