@@ -8,22 +8,22 @@
 
 @font-face {
     font-family: 'Lato-Thin';
-    src: url('../../fonts/Lato/Lato-Thin.ttf') format('truetype');
+    src: url('../fonts/Lato/Lato-Thin.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Lato-Light';
-    src: url('../../fonts/Lato/Lato-Light.ttf') format('truetype');
+    src: url('../fonts/Lato/Lato-Light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Lato-Regular';
-    src: url('../../fonts/Lato/Lato-Regular.ttf') format('truetype');
+    src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Lato-Bold';
-    src: url('../../fonts/Lato/Lato-Bold.ttf') format('truetype');
+    src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
 }
 
 * {
@@ -303,5 +303,31 @@ body {
     }
     .separation {
         display: none;
+    }
+}
+
+.interest-group {
+    display: flex;
+    max-width: 44vw;
+    ;
+}
+
+.interest-item {
+    display: block;
+    text-align: center;
+    transition: 0.5s ease;
+    img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        border: 2px solid var(--lightgrey);
+    }
+    p {
+        font-size: 10px;
+    }
+    margin-right:20px;
+    &:hover {
+        transform: scale(1.5);
+        transition: 0.5s ease;
     }
 }
