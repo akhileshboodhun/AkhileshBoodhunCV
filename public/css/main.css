@@ -266,13 +266,14 @@ body {
 .interest-group {
   display: flex;
   flex-wrap: wrap;
-  max-width: 44vw; }
+  max-width: 44vw;
+  justify-content: space-around; }
 
 .interest-item {
   display: block;
   text-align: center;
   transition: 0.5s ease;
-  margin-right: 15px;
+  margin-right: 5px;
   margin-bottom: 15px; }
   .interest-item img {
     width: 30px;

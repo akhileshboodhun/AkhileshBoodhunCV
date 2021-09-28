@@ -332,6 +332,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     max-width: 44vw;
+    justify-content: space-around;
 }
 
 .interest-item {
@@ -347,7 +348,7 @@ body {
     p {
         font-size: var(--sfont);
     }
-    margin-right:15px;
+    margin-right:5px;
     margin-bottom: 15px;
     &:hover {
         transform: scale(1.5);
