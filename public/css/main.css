@@ -265,13 +265,15 @@ body {
 
 .interest-group {
   display: flex;
+  flex-wrap: wrap;
   max-width: 44vw; }
 
 .interest-item {
   display: block;
   text-align: center;
   transition: 0.5s ease;
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 20px; }
   .interest-item img {
     width: 30px;
     height: 30px;

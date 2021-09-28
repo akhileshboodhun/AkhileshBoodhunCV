@@ -330,8 +330,8 @@ body {
 
 .interest-group {
     display: flex;
+    flex-wrap: wrap;
     max-width: 44vw;
-    ;
 }
 
 .interest-item {
@@ -348,6 +348,7 @@ body {
         font-size: var(--sfont);
     }
     margin-right:20px;
+    margin-bottom: 20px;
     &:hover {
         transform: scale(1.5);
         transition: 0.5s ease;
